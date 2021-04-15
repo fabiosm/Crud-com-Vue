@@ -46,7 +46,7 @@
 										<td>{{ user.cpf }}</td>
 										<td>{{ user.email }}</td>
 										<td>{{ user.telefone }}</td>
-										<td>{{ user.sexo }}</td>
+										<td>{{ exibeSexo(user.sexo) }}</td>
 										<td>{{ user.dataNascimento }}</td>
 										<td>
 											<v-btn rounded color="pink darken-2" dark @click="model_editar(user.id)">
@@ -286,6 +286,17 @@
 							return false;
 						}						
 						return true;
+					},
+
+					exibeSexo: function(idSexo){
+						idSexo = parseInt(idSexo);
+						var sexo=null;
+						switch(idSexo){
+							case 1: sexo="Masculino"; break;
+							case 2: sexo="Feminino"; break;
+							case 3: sexo="Outros"; break;
+						}
+						return sexo;
 					}
 				}      
     		});
