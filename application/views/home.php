@@ -170,6 +170,8 @@
 
 					editar: function(){
 						editar_user = this.user;
+
+						console.log(editar_user);
 					
 						console.log('NOVO USUARIO');
 						console.log(editar_user);	
@@ -193,7 +195,7 @@
                             showCancelButton: true,                          
                         }).then((result) => {                
                             if(result.isConfirmed) {      
-                                axios.get(url+'apagar/'+id).then(response =>{           
+                                axios.delete(url+'apagar/'+id).then(response =>{           
                                     this.exibir();                                   
                                 });      
                                 Swal.fire('Eliminado!', '', 'success')

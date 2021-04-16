@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "fb68ec0a-8871-423e-b9fd-cab250ca7014",
+		"name": "Teste BRQ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Busca user por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TesteBRQ/user/get_user/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TesteBRQ",
+						"user",
+						"get_user",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista usuários do banco",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TesteBRQ/user/exibir/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TesteBRQ",
+						"user",
+						"exibir",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edita usuário por ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\":\r\n    {\r\n        \"id\":\"2\",\r\n        \"nome\":\"Fabio Marcelino\",\r\n        \"cpf\":\"04747555501\",\r\n        \"email\":\"fabio_s.m@hotmail.com\",\r\n        \"telefone\":\"71999409774\",\r\n        \"sexo\":\"1\",\r\n        \"dataNascimento\":\"1990-06-04\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TesteBRQ/user/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TesteBRQ",
+						"user",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apaga usuário por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/TesteBRQ/user/apagar/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TesteBRQ",
+						"user",
+						"apagar",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir novo usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"user\":\r\n    {\r\n        \"nome\":\"Fabio Marcelino\",\r\n        \"cpf\":\"04747555501\",\r\n        \"email\":\"fabio_s.m@hotmail.com\",\r\n        \"telefone\":\"71999409774\",\r\n        \"sexo\":\"1\",\r\n        \"dataNascimento\":\"1990-06-04\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/TesteBRQ/user/criar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"TesteBRQ",
+						"user",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
